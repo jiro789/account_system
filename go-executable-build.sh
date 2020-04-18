@@ -9,10 +9,6 @@ fi
 package_name=$package
 
 platforms=("windows/amd64" "windows/386" "darwin/amd64")
-cd client
-yarn build
-# shellcheck disable=SC2103
-cd ..
 for platform in "${platforms[@]}"
 do
     platform_split=(${platform//\// })

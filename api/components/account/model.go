@@ -36,7 +36,7 @@ func (a *Account) Debit(amount common.AmountType) (*transaction.Transaction, *ap
 	return transaction.Copy(newT), nil
 }
 
-func (a *Account) Credit(amount common.AmountType) (*transaction.Transaction, *api_errors.ApiError){
+func (a *Account) Credit(amount common.AmountType) (*transaction.Transaction, *api_errors.ApiError) {
 	a.Lock.Lock()
 	a.Balance += amount
 	newT := transaction.New(amount, transaction.CREDIT)
@@ -65,7 +65,7 @@ func (a *Account) GetTransaction(tId common.IdType) (*transaction.Transaction, *
 	var newT *transaction.Transaction
 	for _, t := range a.Transactions {
 		if tId == t.Id {
-			newT = transaction.Copy(&t);
+			newT = transaction.Copy(&t)
 		}
 	}
 	a.Lock.RUnlock()

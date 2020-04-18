@@ -10,6 +10,10 @@ For Development of the frontend just head to client and you can use the availabl
 
 To run the application just use 
 
+#### `cd client && yarn run build`
+
+after that
+
 #### `./go-executable-build.sh name_you_want`
 
 Choose your executable based on your system from build folder

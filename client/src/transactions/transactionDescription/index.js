@@ -11,18 +11,10 @@ export default function TransactionDescription({
   return (
     <ExpansionPanelDetails>
       <div>
-        <p>
           <Typography>{`Id: ${id}`}</Typography>
-        </p>
-        <p>
           <Typography>{`Type: ${type}`}</Typography>
-        </p>
-        <p>
           <Typography>{`Amount: ${amount}`}</Typography>
-        </p>
-        <p>
           <Typography>{`Effective Date: ${effective_date}`}</Typography>
-        </p>
       </div>
     </ExpansionPanelDetails>
   );

@@ -6,7 +6,7 @@ import (
 
 type User struct {
 	Id   common.IdType `json:"id"`
-	Name string `json:"name"`
+	Name string        `json:"name"`
 }
 
 func New(name string) *User {

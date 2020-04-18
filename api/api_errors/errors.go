@@ -3,7 +3,7 @@ package api_errors
 import "net/http"
 
 type ApiError struct {
-	Status  int `json:"status"`
+	Status  int    `json:"status"`
 	Message string `json:"message"`
 	Code    string `json:"code"`
 }

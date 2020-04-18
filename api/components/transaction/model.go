@@ -12,10 +12,10 @@ const (
 )
 
 type Transaction struct {
-	Id            common.IdType `json:"id"`
-	Type          Type `json:"type"`
+	Id            common.IdType     `json:"id"`
+	Type          Type              `json:"type"`
 	Amount        common.AmountType `json:"amount"`
-	EffectiveDate common.DateType `json:"effective_date"`
+	EffectiveDate common.DateType   `json:"effective_date"`
 }
 
 func New(amount common.AmountType, transactionType Type) *Transaction {
@@ -28,11 +28,11 @@ func New(amount common.AmountType, transactionType Type) *Transaction {
 	return t
 }
 
-func Copy(other *Transaction) *Transaction{
+func Copy(other *Transaction) *Transaction {
 	newT := &Transaction{
-		Id: other.Id,
-		Amount: other.Amount,
-		Type: other.Type,
+		Id:            other.Id,
+		Amount:        other.Amount,
+		Type:          other.Type,
 		EffectiveDate: other.EffectiveDate,
 	}
 	return newT

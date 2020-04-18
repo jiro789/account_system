@@ -27,12 +27,14 @@ export default function TransactionsList() {
 
   const list = transactions.map((transaction) => {
     return (
-      <ExpansionPanel>
-        <TransactionSummary {...transaction}></TransactionSummary>
-        <TransactionDescription {...transaction}></TransactionDescription>
-      </ExpansionPanel>
+      <li key={transaction.id} style={ { "listStyleType": "none" } }>
+        <ExpansionPanel>
+          <TransactionSummary {...transaction}></TransactionSummary>
+          <TransactionDescription {...transaction}></TransactionDescription>
+        </ExpansionPanel>
+      </li>
     );
   });
 
-  return <div className={classes.root}>{list}</div>;
+  return <ul className={classes.root}>{list}</ul>;
 }

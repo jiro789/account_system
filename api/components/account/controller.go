@@ -9,11 +9,11 @@ import (
 )
 
 var (
-	systemAccount *Account = createMainAccount();
+	systemAccount *Account = createMainAccount()
 )
 
 type modificationInput struct {
-	Type transaction.Type `form:"type" json:"Type" binding:"required,oneof=credit debit"`
+	Type   transaction.Type  `form:"type" json:"Type" binding:"required,oneof=credit debit"`
 	Amount common.AmountType `form:"amount" json:"Amount" binding:"required,gt=0"`
 }
 
@@ -67,4 +67,3 @@ func HandleGetTransaction(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, transaction)
 }
-
